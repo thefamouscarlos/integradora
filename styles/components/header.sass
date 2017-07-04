@@ -1,0 +1,33 @@
+/* Header CSS */
+.logo
+  margin-top: 0
+  font-size: 24px
+
+.navbar-inverse
+  color: #ffffff
+  font-family: 'Open Sans', sans-serif
+  background: linear-gradient(to right, #00d39f 0%, #008bd3 25%, #d40063 75%, #d4be00 100%)
+  margin-top: -2px
+  margin-bottom: 0
+  padding-bottom: 15px
+  z-index: 1
+  border: none
+  a
+    color: #ffffff !important
+    margin-top: 15px
+    font-size: 16px
+    font-weight: 500
+    margin-right: 15px
+
+  .active-link
+    border-bottom: solid 2px #ffffff
+
+  .nav-effect::after
+    content: ''
+    display: block
+    width: 0
+    height: 2px
+    background: #ffffff
+    transition: width .3s
+  .nav-effect:hover::after
+    width: 95%
