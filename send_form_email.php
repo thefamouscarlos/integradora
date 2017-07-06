@@ -20,7 +20,7 @@ if(isset($_POST['correo'])) {
         die();
     }
 
-    //validacion
+    //Validacion
     if (!isset($_POST['nombre']) ||
         !isset($_POST['correo']) ||
         !isset($_POST['subjeto'])
@@ -54,7 +54,7 @@ if(isset($_POST['correo'])) {
 
     $email_message = "Informacion del formulario sirfic.\n\n";
 
-    function clean_string($string)
+    function clean_string($string) //limpia el correo para ser enviado
     {
         $bad = array("content-type", "bcc:", "to:", "cc:", "href");
         return str_replace($bad, "", $string);
@@ -64,11 +64,11 @@ if(isset($_POST['correo'])) {
     $email_message .= "Correo " . clean_string($email_from) . "\n";
     $email_message .= "Mensaje: " . clean_string($message) . "\n";
 
-    // create email headers
-    $headers = 'De: ' . $email_from . "\r\n" .
-        'Favor de responder a: ' . $email_from . "\r\n" .
+    // Crea el correo
+    $headers = 'De: ' . $email_from . "\r\n" . // el encabezado de quien mando el correo
+        'Favor de responder a: ' . $email_from . "\r\n" . // se explica sola
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_headline, $email_message, $headers);
+    @mail($email_to, $email_headline, $email_message, $headers); //El correo
 
 }
     ?>
