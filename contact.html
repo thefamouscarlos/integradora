@@ -1,6 +1,6 @@
 <?php
     include_once'./mega-footer-frontend.php'
-    $bdfetch = new fetch_sql_data
+    $bdfetch = new fetch_sql_data();
 ?>
 
 <!doctype html>
@@ -172,10 +172,10 @@
             </div>
             <div class="col-sm-4">
                 <h3>Ubicanos</h3>
-                <i class="fa fa-map-marker"><span><?php echo $result_ub?></span></i>
-                <i class="fa fa-phone"><span><?php echo $result_tf ?></span></i>
+                <i class="fa fa-map-marker"><span><?php echo $bdfetch-> $result_ub ?></span></i>
+                <i class="fa fa-phone"><span><?php echo $bdfetch-> $result_tf ?></span></i>
                 <div class="col-sm-l2">
-                    <i class="fa fa-envelope"><span><?php echo $result_ce ?></span></i>
+                    <i class="fa fa-envelope"><span><?php echo bdfetch-> $result_ce ?></span></i>
                 </div>
             </div>
         </div>

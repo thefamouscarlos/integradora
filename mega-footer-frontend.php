@@ -5,8 +5,23 @@
  * Date: 7/6/2017
  * Time: 9:38 PM
  */
+ private $conn;
+ private $server = "localhost";
+ private $user = "root";
+ private $passw = "";
+ private $bd = "sirfic";
 
-function fetch_sql_data(){
+ public function __construct() {
+         // Create connection
+         $this->conn = new mysqli($this->server, $this->user, $this->passw, $this->bd);
+
+         // Check connection
+         if ($this->conn->connect_error) {
+             die("Connection failed: " . $this->conn->connect_error);
+         }
+     }
+
+public function fetch_sql_data(){
     $query1 = "SELECT facebook FROM links";
     $query2 = "SELECT twitter FROM links";
     $query3 = "SELECT whatsapp FROM links";
