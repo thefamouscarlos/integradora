@@ -1,5 +1,10 @@
+<?php
+    include_once'./mega-footer-frontend.php'
+    $bdfetch = new fetch_sql_data
+?>
+
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="description" content="SIRFIC">
@@ -120,6 +125,19 @@
     </div>
 </section>
 
+<section class="logos">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="images/LOGO%20SIRFIC.png" class="center">
+            </div>
+            <div class="col-sm-6">
+                <img src="images/SAYER.gif" class="center">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="call-us">
     <div class="container">
         <div class="row">
@@ -130,14 +148,35 @@
     </div>
 </section>
 
-<section class="logos">
+<section class="mega-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <img src="images/LOGO%20SIRFIC.png" class="center">
+            <div class="col-sm-4">
+                <img src="images/LOGO%20SIRFIC.png">
+                <div class="col-sm-12">
+                    <a href="<?php echo $result_fa ?>"><i class="fa fa-facebook"></i></a>
+                    <a href="<?php echo $result_tw ?>"><i class="fa fa-twitter"></i></a>
+                    <a href="<?php echo $result_wa ?>"><i class="fa fa-whatsapp"></i></a>
+                    <a href="<?php echo $result_gp ?>"><i class="fa fa-google-plus-square"></i> </a>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <img src="images/SAYER.gif" class="center">
+            <div class="col-sm-4">
+                <h3>Nuestros Servicios</h3>
+                <ul>
+                    <a href="#"><li>Thing 1</li></a>
+                    <a href="#"><li>Thing 2</li></a>
+                    <a href="#"><li>Thing 3</li></a>
+                    <a href="#"><li>Thing 4</li></a>
+                    <a href="#"><li>Thing 5</li></a>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h3>Ubicanos</h3>
+                <i class="fa fa-map-marker"><span><?php echo $result_ub?></span></i>
+                <i class="fa fa-phone"><span><?php echo $result_tf ?></span></i>
+                <div class="col-sm-l2">
+                    <i class="fa fa-envelope"><span><?php echo $result_ce ?></span></i>
+                </div>
             </div>
         </div>
     </div>
